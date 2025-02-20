@@ -1,0 +1,19 @@
+name: Test Steps Output
+on: workflow_dispatch
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - id: release
+              run: echo "packages/config-array--release_created=true" >> "$GITHUB_OUTPUT"
+
+            # prints "true"  
+            - run: echo result from steps ${{ steps.release.outputs['packages/config-array--release_created'] }}            
+
+            # prints nothing
+            - run: echo result from env $STEPS_RELEASE_OUTPUTS_PACKAGES__CONFIG_ARRAY__RELEASE_CREATED
+
+            # no env variable there
+            - run: export
+
+            - run: echo result from something else $DEBIAN_FRONTEND
