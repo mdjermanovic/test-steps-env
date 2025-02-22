@@ -15,4 +15,8 @@ jobs:
                 STEPS_RELEASE_OUTPUTS: ${{ toJson(steps.release.outputs) }}
               run: echo result from env $STEPS_RELEASE_OUTPUTS
 
+            - env:
+                STEPS_RELEASE_OUTPUTS: ${{ toJson(steps.release.outputs) }}
+              run: node test
+
             - run: echo result from something else $DEBIAN_FRONTEND
