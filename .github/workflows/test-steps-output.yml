@@ -4,6 +4,7 @@ jobs:
     test:
         runs-on: ubuntu-latest
         steps:
+            - uses: actions/checkout@v4
             - id: release
               run: echo "packages/config-array--release_created=true" >> "$GITHUB_OUTPUT"
 
