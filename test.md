@@ -2,7 +2,7 @@
 
 [Jump to #options](#options)
 
-[Jump to #options](#Options)
+[Jump to #Options](#Options)
 
 some
 
